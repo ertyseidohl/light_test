@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Light Test</title>
+	<script src="light.js"></script>
+	<script src="test.js"></script>
+	<script src="box.js"></script>
+</head>
+<body>
+
+<canvas id="canvas" width="500" height="400"></canvas>
+
+<script>
+	var test = new Test("canvas");
+	function step() {
+		test.loop();
+		window.requestAnimationFrame(step);
+	}
+	window.requestAnimationFrame(step);
+</script>
+</body>
+</html>
